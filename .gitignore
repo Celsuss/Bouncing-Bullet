@@ -8,7 +8,6 @@
 *_i.c
 *_p.c
 *.ncb
-*.suo
 *.tlb
 *.tlh
 *.bak
@@ -24,10 +23,11 @@
 # =============== #
 Temp/
 Library/
+Assets/Standard Assets/
+Assets/Editor/
+
 *.meta
 *.info
-
-
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
