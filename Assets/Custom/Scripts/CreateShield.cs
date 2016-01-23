@@ -5,14 +5,15 @@ public class CreateShield : MonoBehaviour {
 
     [SerializeField] private float _duration;
     [SerializeField] private float _tickTime;
-
+    [SerializeField] private GameObject _shield;
     private float _tickTimer;
-    private GameObject _shield;
 
 	// Use this for initialization
 	void Start () {
         _tickTimer = _tickTime;
-        _shield = transform.FindChild("MainCamera").FindChild("Shield").gameObject;
+        Vector3 pos = transform.position + transform.forward + -transform.right;
+        _shield = (GameObject)Instantiate(_shield, pos, Quaternion.identity);
+        _shield.transform.parent = transform;
         _shield.SetActive(false);
 	}
 	
