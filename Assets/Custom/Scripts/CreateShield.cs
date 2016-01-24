@@ -11,7 +11,7 @@ public class CreateShield : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         _tickTimer = _tickTime;
-        Vector3 pos = transform.position + transform.forward + -transform.right;
+        Vector3 pos = new Vector3(transform.position.x - 0.3F, transform.position.y - 0.3F, transform.position.z + 0.5F);
         _shield = (GameObject)Instantiate(_shield, pos, Quaternion.identity);
         _shield.transform.parent = transform;
         _shield.SetActive(false);
